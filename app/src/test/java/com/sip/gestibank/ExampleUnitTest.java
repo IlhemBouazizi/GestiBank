@@ -1,4 +1,4 @@
-package com.example.gestibank;
+package com.sip.gestibank;
 
 import org.junit.Test;
 

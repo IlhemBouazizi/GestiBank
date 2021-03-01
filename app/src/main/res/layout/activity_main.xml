@@ -6,43 +6,46 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnGetUsersList"
-        android:layout_width="314dp"
-        android:layout_height="51dp"
-        android:layout_marginBottom="116dp"
-        android:background="#32CD32"
-        android:text="Faire une conversion devise"
-        android:textColor="#ffffff"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
-        tools:layout_editor_absoluteX="45dp" />
-
-    <Button
-        android:id="@+id/btnDeleteUser"
-        android:layout_width="321dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="136dp"
-        android:background="#BA55D3"
-        android:text="Créer un nouveau compte"
-        android:textColor="#ffffff"
-        app:layout_constraintBottom_toTopOf="@+id/btnGetUsersList"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.487"
-        tools:layout_editor_absoluteX="45dp" />
-
-    <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="168dp"
-            android:text="Bienvenu à GestiBank"
+            app:srcCompat="@drawable/logo_ilhem" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/newyork" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Bienvenue à GestiBank"
+            android:textColor="#009688"
             android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="CallCreationCompteActivity"
+            android:text="CREER UN NOUVEAU COMPTE" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="CallConversionActivity"
+            android:text="FAIRE UNE CONVERSION DEVICE" />
+
     </LinearLayout>
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

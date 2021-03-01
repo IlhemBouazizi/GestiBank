@@ -2,5 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/androidCrudfront" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/repo/androidCrudfront" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/repo/test" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/repo/test-1" vcs="Git" />
   </component>
 </project>
