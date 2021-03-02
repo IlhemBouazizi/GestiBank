@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="PerformConversion"
     tools:context=".ConversionActivity">
 
     <LinearLayout
@@ -51,12 +52,12 @@
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/editTextTextPersonName"
-                    android:layout_width="wrap_content"
+                <Spinner
+                    android:id="@+id/spinner_devices"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName" />
+                    android:spinnerMode="dropdown" />
+
             </TableRow>
 
             <TableRow
@@ -73,7 +74,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName2"
+                    android:id="@+id/editText_Montant"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -93,12 +94,11 @@
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/editTextTextPersonName3"
+                <TextView
+                    android:id="@+id/textView_resultat"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName" />
+                    android:layout_height="wrap_content" />
+
             </TableRow>
 
         </TableLayout>
@@ -107,6 +107,7 @@
             android:id="@+id/button5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="PerformConversion"
             android:text="CONVERTIR" />
 
     </LinearLayout>
