@@ -22,5 +22,10 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(MainActivity.this, NewClient.class);
         startActivity(i);
     }
+
+    public void CallEspaceAdminActivity(View view){
+        Intent i = new Intent(getApplicationContext(), EspaceAdminActivity.class);
+        startActivity(i);
+    }
 }
 
