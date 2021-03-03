@@ -52,7 +52,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName"
+                    android:id="@+id/editName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -73,11 +73,11 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/editText_Montant"
+                    android:id="@+id/editPrenom"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName|textPassword" />
             </TableRow>
 
         </TableLayout>
@@ -86,7 +86,8 @@
             android:id="@+id/button5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="SE CONNECTER" />
+            android:text="SE CONNECTER"
+           />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

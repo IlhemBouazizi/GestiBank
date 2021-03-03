@@ -1,10 +1,8 @@
 package com.sip.gestibank;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.view.View;
 import android.content.Intent;
-
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,13 +13,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void CallCreationCompteActivity(View view){
-        Intent i = new Intent(getApplicationContext(), CreationCompteActivity.class);
+    public void interfaceConversionDevise(View view){
+        Intent i = new Intent(MainActivity.this, ConversionActivity.class);
         startActivity(i);
     }
 
-    public void CallConversionActivity(View view){
-        Intent i = new Intent(getApplicationContext(), ConversionActivity.class);
+    public void addNewClient(View view){
+        Intent i = new Intent(MainActivity.this, NewClient.class);
         startActivity(i);
     }
 }

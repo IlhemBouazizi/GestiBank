@@ -35,7 +35,7 @@ public class ConversionActivity extends AppCompatActivity {
 
         TextView ResultTextView = (TextView)findViewById(R.id.textView_resultat);
 
-        TextView MontantTextView = (TextView)findViewById(R.id.editText_Montant);
+        TextView MontantTextView = (TextView)findViewById(R.id.editPrenom);
 
         if (!MontantTextView.getText().toString().equals("")) {
             double MontantValue = Double.parseDouble(MontantTextView.getText().toString());

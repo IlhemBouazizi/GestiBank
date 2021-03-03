@@ -47,7 +47,7 @@
                     android:id="@+id/textView4"
                     android:layout_width="99dp"
                     android:layout_height="wrap_content"
-                    android:text="Device"
+                    android:text="Devise"
                     android:textColor="#3F51B5"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -74,11 +74,11 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/editText_Montant"
+                    android:id="@+id/editPrenom"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="textPersonName" />
+                    android:inputType="number" />
             </TableRow>
 
             <TableRow
@@ -108,7 +108,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="PerformConversion"
-            android:text="CONVERTIR" />
+            android:text="CONVERTIR"
+            />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

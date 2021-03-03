@@ -37,14 +37,15 @@
             android:id="@+id/button3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="CallCreationCompteActivity"
-            android:text="CREER UN NOUVEAU COMPTE" />
+            android:onClick="addNewClient"
+            android:text="CREER UN NOUVEAU COMPTE"
+             />
 
         <Button
             android:id="@+id/button4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="CallConversionActivity"
+            android:onClick="interfaceConversionDevise"
             android:text="FAIRE UNE CONVERSION DEVICE" />
 
     </LinearLayout>

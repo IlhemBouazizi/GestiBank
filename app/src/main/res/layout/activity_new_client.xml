@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreationCompteActivity">
+    tools:context=".NewClient">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -52,7 +52,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName"
+                    android:id="@+id/editName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -73,7 +73,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/editText_Montant"
+                    android:id="@+id/editPrenom"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -94,11 +94,11 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName3"
+                    android:id="@+id/editTel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName|textEmailAddress|phone" />
             </TableRow>
 
             <TableRow
@@ -115,11 +115,11 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName4"
+                    android:id="@+id/editEmail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName|textEmailSubject" />
             </TableRow>
         </TableLayout>
 
@@ -127,6 +127,7 @@
             android:id="@+id/button5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="addNewClient"
             android:text="CREER COMPTE" />
 
         <TextView
@@ -144,7 +145,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:onClick="CallAuthentificationActivity"
+            android:onClick="addNewClient"
             android:text="cliquez ici"
             android:textColor="#3F51B5"
             android:textSize="24sp"
