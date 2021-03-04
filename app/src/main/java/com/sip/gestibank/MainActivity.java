@@ -27,5 +27,10 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(getApplicationContext(), EspaceAdminActivity.class);
         startActivity(i);
     }
+
+    public void CallAuthentificationAdminActivity(View view){
+        Intent i = new Intent(getApplicationContext(), AuthentificationActivity.class);
+        startActivity(i);
+    }
 }
 

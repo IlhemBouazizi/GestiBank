@@ -106,7 +106,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView7"
+                    android:id="@+id/textViewTypeCompte"
                     android:layout_width="99dp"
                     android:layout_height="wrap_content"
                     android:text="Email"
