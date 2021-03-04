@@ -34,6 +34,13 @@
             android:textStyle="bold" />
 
         <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="CallAuthentificationAdminActivity"
+            android:text="AUTHENTIFICATION" />
+
+        <Button
             android:id="@+id/button3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -47,13 +54,6 @@
             android:layout_height="wrap_content"
             android:onClick="interfaceConversionDevise"
             android:text="FAIRE UNE CONVERSION DEVICE" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="CallEspaceAdminActivity"
-            android:text="ESPACE ADMINISTRATEUR" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

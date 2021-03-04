@@ -3,10 +3,13 @@ package com.sip.gestibank;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.util.List;
@@ -35,8 +38,17 @@ public class NewClient extends AppCompatActivity {
 
         name = (EditText) findViewById(R.id.editName);
         prenom = (EditText) findViewById(R.id.editPrenom);
-        email = (EditText) findViewById(R.id.editEmail);
+        email = (EditText) findViewById(R.id.editMail);
         tel = (EditText) findViewById(R.id.editTel);
+
+        String[] arraySpinner = new String[] {
+                "Compte courant sans découvert", "Compte courant avec découvert", "Compte épargne"
+        };
+        Spinner s = (Spinner) findViewById(R.id.spinner_type_compte);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, arraySpinner);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        s.setAdapter(adapter);
 
 
     }
@@ -102,5 +114,10 @@ public class NewClient extends AppCompatActivity {
         builder.setTitle(title);
         builder.setMessage(message);
         builder.show();
+    }
+
+    public void CallAuthentificationAdminActivity(View view){
+        Intent i = new Intent(getApplicationContext(), AuthentificationActivity.class);
+        startActivity(i);
     }
 }

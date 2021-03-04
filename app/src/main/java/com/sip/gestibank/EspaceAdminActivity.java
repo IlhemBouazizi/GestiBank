@@ -77,6 +77,11 @@ public class EspaceAdminActivity extends AppCompatActivity {
         Intent i = new Intent(getApplicationContext(), ConsulterLesDemandesActivity.class);
         startActivity(i);
     }
+
+    public void CallAuthentificationAdminActivity(View view){
+        Intent i = new Intent(getApplicationContext(), AuthentificationActivity.class);
+        startActivity(i);
+    }
 /*
    public void CallListeDesAgentsActivity(View view){
         Intent i = new Intent(getApplicationContext(), ListeDesAgentsActivity.class);
