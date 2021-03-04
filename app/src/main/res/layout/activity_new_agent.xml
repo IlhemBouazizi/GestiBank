@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AjouterUnAgentActivity">
+    tools:context=".NewAgent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -48,11 +48,11 @@
                     android:layout_height="wrap_content"
                     android:text="Nom"
                     android:textColor="#3F51B5"
-                    android:textSize="24sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName"
+                    android:id="@+id/editNameAgent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -69,11 +69,11 @@
                     android:layout_height="wrap_content"
                     android:text="Prénom"
                     android:textColor="#3F51B5"
-                    android:textSize="24sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/editText_Montant"
+                    android:id="@+id/editPrenomAgent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -90,11 +90,11 @@
                     android:layout_height="wrap_content"
                     android:text="Téléphone"
                     android:textColor="#3F51B5"
-                    android:textSize="24sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName3"
+                    android:id="@+id/editTelAgent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -111,11 +111,11 @@
                     android:layout_height="wrap_content"
                     android:text="Email"
                     android:textColor="#3F51B5"
-                    android:textSize="24sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName4"
+                    android:id="@+id/editMailAgent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -127,16 +127,16 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView7"
+                    android:id="@+id/textView8"
                     android:layout_width="99dp"
                     android:layout_height="wrap_content"
                     android:text="Matricule"
                     android:textColor="#3F51B5"
-                    android:textSize="24sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName4"
+                    android:id="@+id/editMatriculeAgent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -145,9 +145,10 @@
         </TableLayout>
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/btnAjouterAgent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="addNewAgent"
             android:text="AJOUTER" />
 
     </LinearLayout>

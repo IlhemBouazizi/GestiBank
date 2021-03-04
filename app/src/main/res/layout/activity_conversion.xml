@@ -49,7 +49,7 @@
                     android:layout_height="wrap_content"
                     android:text="Devise"
                     android:textColor="#3F51B5"
-                    android:textSize="24sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <Spinner
@@ -70,7 +70,7 @@
                     android:layout_height="wrap_content"
                     android:text="Montant"
                     android:textColor="#3F51B5"
-                    android:textSize="24sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <EditText
@@ -91,7 +91,7 @@
                     android:layout_height="wrap_content"
                     android:text="Résultat"
                     android:textColor="#3F51B5"
-                    android:textSize="24sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -104,7 +104,7 @@
         </TableLayout>
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/btnListeAgent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="PerformConversion"
