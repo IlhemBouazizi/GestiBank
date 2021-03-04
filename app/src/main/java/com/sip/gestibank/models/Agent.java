@@ -41,7 +41,7 @@ public class Agent {
         this.prenom = prenom;
         this.email = email;
         this.tel = tel;
-        this.role = "Agent";
+        this.role = "AGENT";
         this.matricule = matricule;
         this.password = "";
 

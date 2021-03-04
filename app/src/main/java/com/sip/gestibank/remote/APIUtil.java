@@ -6,6 +6,7 @@ public class APIUtil {
 
     public static final String API_URL = "http://192.168.1.82:85/clients/";
     public static final String API_URL_Agent = "http://192.168.1.82:85/agent/";
+    public static final String API_AUTH = "http://192.168.1.82:85";
     public static final String API_CURRENCY = "http://api.currencylayer.com/";
 
 
@@ -14,6 +15,9 @@ public class APIUtil {
     }
     public static AgentService getAgentService(){
         return RetrofitAgent.getAgents(API_URL_Agent).create(AgentService.class);
+    }
+    public static AuthService getAuthService(){
+        return RetrofitClient.getClient(API_AUTH).create(AuthService.class);
     }
 /*
     public static CurrencyService getCurrencyService(){

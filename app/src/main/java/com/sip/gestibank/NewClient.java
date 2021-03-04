@@ -36,8 +36,8 @@ public class NewClient extends AppCompatActivity {
         setContentView(R.layout.activity_new_client);
         clientService = APIUtil.getClientService();
 
-        name = (EditText) findViewById(R.id.editName);
-        prenom = (EditText) findViewById(R.id.editPrenom);
+        name = (EditText) findViewById(R.id.editEmail);
+        prenom = (EditText) findViewById(R.id.editPassword);
         email = (EditText) findViewById(R.id.editMail);
         tel = (EditText) findViewById(R.id.editTel);
 
@@ -116,7 +116,7 @@ public class NewClient extends AppCompatActivity {
         builder.show();
     }
 
-    public void CallAuthentificationAdminActivity(View view){
+    public void CallAuthentificationAgentActivity(View view){
         Intent i = new Intent(getApplicationContext(), AuthentificationActivity.class);
         startActivity(i);
     }

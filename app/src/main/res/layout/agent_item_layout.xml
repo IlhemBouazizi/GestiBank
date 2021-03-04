@@ -47,6 +47,11 @@
                 android:text="Prénom"
                 android:textColor="#3F51B5" />
 
+            <TextView
+                android:id="@+id/textViewPrenom"
+                android:layout_width="259dp"
+                android:layout_height="match_parent" />
+
         </LinearLayout>
 
 
@@ -67,10 +72,6 @@
                 android:layout_width="259dp"
                 android:layout_height="match_parent" />
 
-            <TextView
-                android:id="@+id/textViewPrenom"
-                android:layout_width="259dp"
-                android:layout_height="match_parent" />
         </LinearLayout>
 
         <LinearLayout

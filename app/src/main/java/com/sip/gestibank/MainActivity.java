@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    public void CallAuthentificationAdminActivity(View view){
+    public void CallAuthentificationActivity(View view){
         Intent i = new Intent(getApplicationContext(), AuthentificationActivity.class);
         startActivity(i);
     }

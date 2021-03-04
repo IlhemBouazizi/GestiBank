@@ -2,7 +2,7 @@ package com.sip.gestibank.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-public class Client {
+public class Client extends User {
 
     @SerializedName("name")
     @Expose
@@ -24,7 +24,7 @@ public class Client {
     @Expose
     private String role;
 
-    @SerializedName("status")
+    @SerializedName("statut")
     @Expose
     private String statut;
 

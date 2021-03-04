@@ -3,6 +3,7 @@ package com.sip.gestibank;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -42,25 +43,21 @@ public class ListeDesAgentsActivity extends AppCompatActivity {
     static String agent_matr;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        int i;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_liste_des_agents);
 
-       agentService = APIUtil.getAgentService();
-for(i=0;i<=3;i++) {
-    AgentTableau[i] = new Agent("BENALI2", "Ali", "ali@gmail.com", "0611223344", "G124");
-}
+
 
         getAgentsList();
 
 
 
 
-        ListView listView = (ListView) findViewById(R.id.listViewAgents);
+        /*ListView listView = (ListView) findViewById(R.id.listViewAgents);
 
         List<Agent> image_details = getAgentsList();
 
-        listView.setAdapter(new CustomListAdapter(this, image_details));
+        listView.setAdapter(new CustomListAdapter(this, image_details));*/
 
 
 
@@ -87,18 +84,68 @@ for(i=0;i<=3;i++) {
         });*/
     }
 
-    private List<Agent>  getAgentsList() {
+    public void getAgentsList() {
+        agentService = APIUtil.getAgentService();
+        Call<List<Agent>> call = agentService.getAgents();
+        call.enqueue(new Callback<List<Agent>>() {
+            @Override
+            public void onResponse(Call<List<Agent>> call, Response<List<Agent>> response) {
+                if (response.isSuccessful()) {
+                    list = response.body();
+                    Log.i("Data: ", list.toString());
 
-        List<Agent> list_to_return = new ArrayList<Agent>();
+                    ListView listView = (ListView) findViewById(R.id.listViewAgents);
+
+                    listView.setAdapter(new CustomListAdapter(ListeDesAgentsActivity.this, list));
+
+                    /*StringBuffer buffer = new StringBuffer();
+                    for (Agent user : list) {
+
+                        buffer.append("Nom et prénom : " + user.getName() + " " + user.getPrenom() + "\n\n");
+                        buffer.append("Email: " + user.getEmail() + "\n\n");
+                        buffer.append("Matricule: " + user.getMatricule() + "\n\n");
+                    }
+                    showMessage("Liste des agents dans la banque", buffer.toString());*/
+
+                    // listView.setAdapter(new UserAdapter(MainActivity.this, R.layout.list_user, list));
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Agent>> call, Throwable t) {
+                Log.e("ERROR: ", t.getMessage());
+            }
+        });
+    }
+
+    public void showMessage(String title, String message) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle(title);
+        builder.setMessage(message);
+        builder.show();
+    }
+
+
+    public void  getAgentsList2(Context Context) {
+
+        agentService = APIUtil.getAgentService();
+
         Call<List<Agent>> call = agentService.getAgents();
 
         call.enqueue(new Callback<List<Agent>>() {
             @Override
             public void onResponse(Call<List<Agent>> call, Response<List<Agent>> response) {
                 if (response.isSuccessful()) {
-                    int Count = 0;
+
+                    Toast.makeText(Context, "Succeed to get List", Toast.LENGTH_SHORT).show();
 
                     list = response.body();
+
+                    ListView listView = (ListView) findViewById(R.id.listViewAgents);
+
+                    listView.setAdapter(new CustomListAdapter(Context, list));
+
                     Log.i("Data: ", list.toString());
 
                     StringBuffer buffer = new StringBuffer();
@@ -116,22 +163,27 @@ for(i=0;i<=3;i++) {
                         agent_matr = user.getMatricule();
 
 
-                        Count = Count+1;
+
 
                         buffer.append("Nom et prénom: " + agent_name + " " + agent_prenom + "\n\n");
                         buffer.append("Email: " + agent_email + "\n\n");
                         buffer.append("Matricule: " + agent_matr + "\n\n");
-                        buffer.append("Count: " + Count + "\n\n");
+
                     }
                     showMessage("Liste des agents dans la banque", buffer.toString());
 
                     // listView.setAdapter(new UserAdapter(MainActivity.this, R.layout.list_user, list));
+                }
+                else
+                {
+                    Toast.makeText(Context, "Error to get List", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<List<Agent>> call, Throwable t) {
                 Log.e("ERROR: ", t.getMessage());
+                Toast.makeText(Context, "onFailure", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -165,17 +217,17 @@ for(i=0;i<=3;i++) {
 
 
 
-        AgentTableau[0] = new Agent(agent_name,agent_prenom,agent_email,"0611223344",agent_matr);
+        /*AgentTableau[0] = new Agent(agent_name,agent_prenom,agent_email,"0611223344",agent_matr);
         AgentTableau[1] = new Agent("BENSALAH1","Salah","salah@gmail.com","0611223355","G125");
         AgentTableau[2] = new Agent("BENAHMED1","Ahmed","ahmed@gmail.com","0611223366","G126");
 
         list_to_return.add(AgentTableau[0]);
         list_to_return.add(AgentTableau[1]);
-        list_to_return.add(AgentTableau[2]);
+        list_to_return.add(AgentTableau[2]);*/
 
 
 
-        return list_to_return;
+
     }
 
     public void getAgentsList8() {
@@ -208,13 +260,7 @@ for(i=0;i<=3;i++) {
         });
     }
 
-    public void showMessage(String title, String message) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setCancelable(true);
-        builder.setTitle(title);
-        builder.setMessage(message);
-        builder.show();
-    }
+
 
 
     /*
