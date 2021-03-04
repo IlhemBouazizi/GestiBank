@@ -26,12 +26,15 @@ public class Client {
 
     @SerializedName("status")
     @Expose
-    private String status;
+    private String statut;
 
     @SerializedName("password")
     @Expose
     private String password;
 
+    @SerializedName("typeCompte")
+    @Expose
+    private String typeCompte;
 
     public Client() {
     }
@@ -43,8 +46,9 @@ public class Client {
         this.email = email;
         this.tel = tel;
         this.role = "CLIENT";
-        this.status = "EN ATTENTE";
-        this.password = "";
+        this.statut = "ATTENTE";
+        this.password = name + "." + prenom;
+        this.typeCompte=typeCompte;
     }
 
     public String getName() {
@@ -80,11 +84,11 @@ public class Client {
     }
 
     public String getStatus() {
-        return status;
+        return statut;
     }
 
     public void setStatus(String status) {
-        this.status = status;
+        this.statut = status;
     }
 
     public String getPassword() {
@@ -94,16 +98,22 @@ public class Client {
     public void setPassword(String password) {
         this.password = password;
     }
+    public String getTypeCOmpte() {
+        return typeCompte;
+    }
 
+    public void setTypeCompte(String tc) {
+        this.typeCompte = tc;
+    }
     @Override
     public String toString() {
         return "Client{" +
-                "name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", tel='" + tel + '\'' +
-                ", role='" + role + '\'' +
-                ", status='" + status + '\'' +
-                ", password='" + password + '\'' +
+                "Nom='" + name + '\'' +
+                ", Email='" + email + '\'' +
+                ", Teléphone='" + tel + '\'' +
+                ", Rôle='" + role + '\'' +
+                ", Statut='" + statut + '\'' +
+                ", Type de compte='" + typeCompte + '\'' +
                 '}';
     }
 
