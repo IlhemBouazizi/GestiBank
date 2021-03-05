@@ -59,7 +59,7 @@ public class ConversionActivity extends AppCompatActivity {
 
         Spinner mySpinner = (Spinner) findViewById(R.id.spinner_devices);
         String to = mySpinner.getSelectedItem().toString();
-        Toast.makeText(ConversionActivity.this, "Devise="+to, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(ConversionActivity.this, "Devise="+to, Toast.LENGTH_SHORT).show();
         String rul = "live?access_key=c7dd6f03f1ee260993147bfc06ab9673&currencies="+to+"&format=1/";
         Call<Currency> call = currencyService.getData(rul);
         call.enqueue(new Callback<Currency>() {
@@ -72,13 +72,13 @@ public class ConversionActivity extends AppCompatActivity {
                     cours = Double.parseDouble(rate);
                     res = cours*input;
                     res = (double)((int)(res*100))/100;
-                    myRes.setText("Résultat conversion = "+Double.valueOf(res).toString());
+                    myRes.setText(Double.valueOf(res).toString());
                 }
             }
 
             @Override
             public void onFailure(Call<Currency> call, Throwable t) {
-                Log.e("Problem: ", t.getMessage());
+                Log.e("Problème: ", t.getMessage());
             }
         });
 
