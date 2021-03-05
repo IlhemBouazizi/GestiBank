@@ -73,11 +73,11 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/editPassword"
+                    android:id="@+id/myInput"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="textPersonName|textPassword" />
+                    android:inputType="textPassword" />
             </TableRow>
 
         </TableLayout>

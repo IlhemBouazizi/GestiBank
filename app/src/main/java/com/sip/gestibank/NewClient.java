@@ -37,7 +37,7 @@ public class NewClient extends AppCompatActivity {
         clientService = APIUtil.getClientService();
 
         name = (EditText) findViewById(R.id.editEmail);
-        prenom = (EditText) findViewById(R.id.editPassword);
+        prenom = (EditText) findViewById(R.id.myInput);
         email = (EditText) findViewById(R.id.editMail);
         tel = (EditText) findViewById(R.id.editTel);
 

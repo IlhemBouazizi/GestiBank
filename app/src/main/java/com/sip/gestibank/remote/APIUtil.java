@@ -19,9 +19,9 @@ public class APIUtil {
     public static AuthService getAuthService(){
         return RetrofitClient.getClient(API_AUTH).create(AuthService.class);
     }
-/*
+
     public static CurrencyService getCurrencyService(){
         return RetrofitClient.getClient(API_CURRENCY).create(CurrencyService.class);
-    }*/
+    }
 }
 

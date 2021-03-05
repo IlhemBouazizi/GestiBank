@@ -53,7 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="interfaceConversionDevise"
-            android:text="FAIRE UNE CONVERSION DEVICE" />
+            android:text="FAIRE UNE CONVERSION DEVISE" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
