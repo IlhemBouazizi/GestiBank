@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -41,23 +43,21 @@ public class NewClient extends AppCompatActivity {
         email = (EditText) findViewById(R.id.editMail);
         tel = (EditText) findViewById(R.id.editTel);
 
-        String[] arraySpinner = new String[] {
-                "Compte courant sans découvert", "Compte courant avec découvert", "Compte épargne"
-        };
-        Spinner s = (Spinner) findViewById(R.id.spinner_type_compte);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, arraySpinner);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        s.setAdapter(adapter);
-
 
     }
 
 
     public void addNewClient(View v){
+        RadioGroup radioGroup;
+        RadioButton radioButton;
 
+        radioGroup = (RadioGroup) findViewById(R.id.radio_type_compte);
+        int radioButtonID = radioGroup.getCheckedRadioButtonId();
 
-        Client client= new Client(name.getText().toString(),prenom.getText().toString(), email.getText().toString(),tel.getText().toString());
+        radioButton = (RadioButton) radioGroup.findViewById(radioButtonID);
+        String typeCompte = (String) radioButton.getText();
+
+        Client client= new Client(name.getText().toString(),prenom.getText().toString(), email.getText().toString(),tel.getText().toString(),typeCompte);
         Call<Client> call = clientService.addClient(client);
         call.enqueue(new Callback<Client>() {
             @Override

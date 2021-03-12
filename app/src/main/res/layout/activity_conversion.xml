@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="CONVERSION DEVICE"
+            android:text="CONVERSION DEVISE"
             android:textAllCaps="true"
             android:textColor="#009688"
             android:textSize="30sp"
@@ -97,14 +97,17 @@
                 <TextView
                     android:id="@+id/textView_resultat"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textColor="#FF5722"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
 
             </TableRow>
 
         </TableLayout>
 
         <Button
-            android:id="@+id/btnListeAgent"
+            android:id="@+id/btnConvertir"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="PerformConversion"

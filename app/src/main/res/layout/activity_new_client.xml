@@ -135,10 +135,30 @@
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
-                <Spinner
-                    android:id="@+id/spinner_type_compte"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                <RadioGroup
+                    android:id="@+id/radio_type_compte"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/radioButton_ccad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Compte courant sans découvert" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton_ccsd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Compte courant avec découvert" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton_ce"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Compte épargne" />
+                </RadioGroup>
 
             </TableRow>
 
@@ -146,7 +166,7 @@
         </TableLayout>
 
         <Button
-            android:id="@+id/btnListeAgent"
+            android:id="@+id/btnConvertir"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="addNewClient"

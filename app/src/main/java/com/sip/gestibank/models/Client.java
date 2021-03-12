@@ -15,11 +15,11 @@ public class Client extends User {
     public Client() {
     }
 
-    public Client(String name, String prenom, String email, String tel)
+    public Client(String name, String prenom, String email, String tel, String typeCompte)
     {
         super(name,prenom,email,tel,"CLIENT",name + "." + prenom);
         this.statut = "ATTENTE";
-        this.typeCompte="TBD";
+        this.typeCompte=typeCompte;
     }
 
     public String getStatus() {
