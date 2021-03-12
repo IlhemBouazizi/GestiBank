@@ -6,6 +6,6 @@ import retrofit2.http.GET;
 import retrofit2.http.Path;
 
 public interface AuthService {
-    @GET("users/{email}")
+    @GET("clients/{email}")
     Call<User> getUserByEmail(@Path("email") String email);
 }

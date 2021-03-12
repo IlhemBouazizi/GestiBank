@@ -15,8 +15,8 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/logo_ilhem" />
+            android:layout_height="165dp"
+            app:srcCompat="@drawable/devise" />
 
         <TextView
             android:id="@+id/textView"

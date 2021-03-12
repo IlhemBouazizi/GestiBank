@@ -43,7 +43,7 @@ public class Agent {
         this.tel = tel;
         this.role = "AGENT";
         this.matricule = matricule;
-        this.password = "";
+        this.password = "123";
 
     }
 

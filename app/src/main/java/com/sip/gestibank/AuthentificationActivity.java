@@ -47,6 +47,8 @@ public class AuthentificationActivity extends AppCompatActivity {
 
             myEmail = email.getText().toString();
             myPassword = password.getText().toString();
+
+            //Log.i("AuthentificationActivit", "myEmail=" + myEmail + ", myPassword=" + myPassword);
             // récupération du user et donc de son role
             /*try
             {*/
@@ -120,6 +122,11 @@ public class AuthentificationActivity extends AppCompatActivity {
             Toast.makeText(AuthentificationActivity.this, "Login invalide !", Toast.LENGTH_SHORT).show();
         }*/
         //fin dachboardUser
+    }
+
+    public void CallMainActivity(View view){
+        Intent i = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(i);
     }
 }
 //fin classe

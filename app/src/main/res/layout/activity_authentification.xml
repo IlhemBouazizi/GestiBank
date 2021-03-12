@@ -15,7 +15,7 @@
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/logo_ilhem" />
+            app:srcCompat="@drawable/login" />
 
         <TextView
             android:id="@+id/textView"
@@ -88,6 +88,13 @@
             android:layout_height="wrap_content"
             android:onClick="dashboardUser"
             android:text="SE CONNECTER" />
+
+        <Button
+            android:id="@+id/btnConvertir2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="CallMainActivity"
+            android:text="ACCEUIL" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

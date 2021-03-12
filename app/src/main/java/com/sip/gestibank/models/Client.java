@@ -19,6 +19,7 @@ public class Client extends User {
     {
         super(name,prenom,email,tel,"CLIENT",name + "." + prenom);
         this.statut = "ATTENTE";
+        this.setPassword("123");
         this.typeCompte=typeCompte;
     }
 
